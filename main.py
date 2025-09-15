@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from utils.databases import engine, get_db
 from models import base, user, restaurant, product, order
 from auth.router import router as auth_router
+from routes.users import router as users_router
 from routes.resturants import router as restaurants_router
 from routes.products import router as products_router
 from routes.orders import router as orders_router
@@ -30,6 +31,7 @@ app = FastAPI(
 app.include_router(auth_router)
 app.include_router(restaurants_router)
 app.include_router(products_router)
+app.include_router(users_router)
 app.include_router(orders_router)
 app.include_router(search_router)
 
