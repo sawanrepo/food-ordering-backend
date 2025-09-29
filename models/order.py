@@ -3,7 +3,7 @@ from sqlalchemy.sql import func
 from .base import Base
 
 class Order(Base):
-    _tablename_ = "orders"
+    __tablename__ = "orders"
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)

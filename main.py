@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from contextlib import asynccontextmanager
 from utils.databases import engine, get_db
-from models import base, user, restaurant, product, order
+from models import base, user, resturant, product, order
 from auth.router import router as auth_router
 from routes.users import router as users_router
 from routes.resturants import router as restaurants_router
